@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Examen en Línea</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <style>
+    body {
+      user-select: none; /* Evita que se pueda seleccionar texto */
+    }
+    .timer {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container my-5">
+    <div id="questionContainer" class="p-5 text-center bg-body-tertiary rounded-3">
+      <h1 id="questionTitle" class="text-body-emphasis">Pregunta</h1>
+      <div id="answersContainer" class="col-lg-8 mx-auto fs-5 text-muted">
+        <!-- Respuestas se cargarán dinámicamente aquí -->
+      </div>
+      <div id="feedback" class="mt-3"></div>
+      <div class="timer" id="timer"></div>
+      <div class="d-inline-flex gap-2 mt-4">
+        <button id="nextButton" class="btn btn-primary btn-lg px-4 rounded-pill" type="button" onclick="resetTimer()">
+          Siguiente Pregunta
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+<div class="modal fade" id="scoreModal" tabindex="-1" aria-labelledby="scoreModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="scoreModalLabel">Resultado del Examen</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="scoreModalBody">
+          <!-- Aquí se mostrará el contenido dinámico -->
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="restartExam()">Hacerlo de nuevo</button>
+  <button type="button" class="btn btn-secondary" onclick="exitExam()">Salir</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

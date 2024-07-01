@@ -1,0 +1,56 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.exam-container {
+    margin-top: 20px;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+.answer {
+    margin-left: 20px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.answer.correct {
+    background-color: lightgreen;
+}
+
+.answer.incorrect {
+    background-color: salmon;
+}
+
+.next-question-btn {
+    display: none;
+}
+
+.timer {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.result {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.result h2 {
+    margin-bottom: 20px;
+}
+
+body {
+    user-select: none; /* Evita que se pueda seleccionar texto */
+  }
